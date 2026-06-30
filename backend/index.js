@@ -32,6 +32,10 @@ connectDB();
 app.use("/book", bookRoute);
 app.use("/user", userRoute);
 
+app.get("/", (req, res) => {
+    res.send("Bookstore backend is running successfully!");
+});
+
 app.listen(PORT, () => {
   console.log(`Server is listening on port ${PORT}`);
 });
